@@ -33,6 +33,15 @@ a{color:inherit;text-decoration:none}
   z-index:10;
   border-bottom:1px solid #eee;
 }
+
+.topbar{
+  transition: transform .3s ease;
+}
+
+.topbar.hide{
+  transform: translateY(-100%);
+}
+
 .logo img{
   width:128px;
   height:auto;
