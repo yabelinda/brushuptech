@@ -134,10 +134,10 @@ a{color:inherit;text-decoration:none}
 }
 .challenge-grid article{text-align:center}
 .challenge-grid img{
-  height:82px;
-  width:105px;
+  height:130px;
+  width:130px;
   object-fit:contain;
-  margin:0 auto 18px;
+  margin:0 auto 24px;
 }
 .challenge-grid h3{
   font-size:17px;
