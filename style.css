@@ -296,31 +296,40 @@ a{color:inherit;text-decoration:none}
   margin:0 0 24px;
 }
 .service-cards{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:32px;
-  align-items:start;
+  position:relative;
+  min-height:420px;
 }
 .service-cards article{
+  position:absolute;
+  width:340px;
   background:#fff;
   border-radius:6px;
   box-shadow:var(--shadow);
-  padding:30px 32px;
-  min-height:160px;
+  padding:34px 36px;
+  min-height:170px;
 }
 .service-cards h3{
-  font-size:20px;
-  margin:0 0 14px;
+  font-size:22px;
+  margin:0 0 16px;
   font-weight:900;
 }
 .service-cards p{
-  font-size:15px;
-  line-height:1.55;
+  font-size:16px;
+  line-height:1.65;
   margin:0;
 }
-.service-cards article:nth-child(1){transform:translateY(-26px)}
-.service-cards article:nth-child(2){transform:translateY(48px)}
-.service-cards article:nth-child(3){transform:translateY(10px)}
+.service-cards article:nth-child(1){
+  top:160px;
+  left:260px;
+}
+.service-cards article:nth-child(2){
+  top:20px;
+  left:480px;
+}
+.service-cards article:nth-child(3){
+  top:150px;
+  right:0;
+}
 
 .about{
   width:min(980px,calc(100% - 40px));
@@ -439,59 +448,136 @@ a{color:inherit;text-decoration:none}
 
 @media(max-width:760px){
   body{font-size:16px}
-  .topbar{height:64px;padding:0 18px}
-  .logo img{width:100px}
-  .nav{gap:12px;font-size:12px}
-  .nav .lang{font-size:12px;padding:4px 10px}
-  .hero{padding-top:62px;min-height:auto}
+
+  .topbar{
+    height:64px;
+    padding:0 18px;
+    justify-content:space-between;
+  }
+
+  .logo img{width:112px}
+
+  /* 手機版只保留 Logo + English */
+  .nav{
+    display:block;
+    font-size:16px;
+  }
+
+  .nav a:not(.lang){
+    display:none;
+  }
+
+  .nav .lang{
+    display:inline-block;
+    font-size:16px;
+    padding:8px 18px;
+  }
+
+  .hero{
+    padding-top:62px;
+    min-height:auto;
+  }
+
   .hero-text h1{font-size:38px}
   .hero-text p{font-size:16px}
+
   .hero-cards,
-  .challenge-grid,
-  .service-cards{grid-template-columns:1fr}
+  .challenge-grid{
+    grid-template-columns:1fr;
+  }
+
   .hero-cards article{min-height:auto}
   .challenge-grid{gap:32px}
+
   .solution-item,
   .product,
   .application-grid,
   .about,
-  .footer{grid-template-columns:1fr}
-  .solution-item{gap:28px;min-height:auto}
+  .footer{
+    grid-template-columns:1fr;
+  }
+
+  /* 修正手機版 Solutions 圖片與文字超出版面 */
+  .solution-list{
+    width:100%;
+    gap:72px;
+    overflow:hidden;
+  }
+
+  .solution-item{
+    gap:28px;
+    min-height:auto;
+    overflow:hidden;
+    width:100%;
+  }
+
   .solution-item.right .image-wrap,
   .solution-item.right .copy{
     grid-column:auto;
     grid-row:auto;
   }
+
   .solution-item::before{
     width:72%;
     height:105px;
   }
+
   .solution-item .image-wrap,
   .solution-item .copy,
   .product-copy{
-    width:min(390px,100%);
+    width:100%;
+    max-width:calc(100vw - 48px);
     justify-self:center;
+    overflow:hidden;
   }
+
+  .solution-item .image-wrap img{
+    width:100%;
+    height:auto;
+  }
+
   .solution-item h3{font-size:28px}
   .solution-item p{font-size:16px}
+
   .product img{
     width:min(440px,100%);
     margin:auto;
   }
+
   .product-copy{justify-self:center}
+
   .service-band{
+    width:calc(100% - 40px);
     padding:46px 28px;
     background:#009fe3;
+    margin-bottom:82px;
   }
-  .service-cards article{transform:none!important}
+
+  .service-cards{
+    position:static;
+    min-height:auto;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+
+  .service-cards article{
+    position:static;
+    width:auto;
+    transform:none!important;
+  }
+
   .about{gap:34px}
+
   .about img{
     width:280px;
     margin:auto;
   }
+
   .footer{
     text-align:center;
     padding:38px 20px;
   }
+
   .footer img{margin:auto}
 }
