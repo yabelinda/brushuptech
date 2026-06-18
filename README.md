@@ -1,13 +1,6 @@
-# Brush Up Technology Static Site
+# BrushUp Wix-style Static Site
 
-這是一個依照 Wix 頁面內容重新整理的靜態網站範例。
+這版是依照你提供的 Wix 長截圖與原網站文字製作：白底、粉藍/粉紅/嫩綠漸層、產品型留白、交錯圖片區塊。
 
-## 使用方式
-1. 用 VS Code 開啟此資料夾
-2. 安裝 Live Server
-3. 對 index.html 按右鍵 → Open with Live Server
-
-## 之後要改的地方
-- 把 .machine-placeholder / .image-box 換成正式圖片
-- 表單目前只是前端樣式，若要真的收到信，可接 Formspree、Netlify Forms 或後端 API
-- 可上傳到 GitHub，再部署到 Vercel
+## 上傳 GitHub
+把整個資料夾內的 `index.html`、`style.css`、`assets/` 上傳到原本 repo，Commit 後 Vercel 會自動更新。
