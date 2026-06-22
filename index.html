@@ -131,14 +131,42 @@
       <div class="diamond"></div>
       <h2>升級您的智能製造產線</h2>
       <p>導入全自動無金屬植毛技術，兼顧品質、效率與永續需求。</p>
-      <form>
-        <label>First name<input type="text"></label>
-        <label>Last name<input type="text"></label>
-        <label>Email<input type="email"></label>
-        <label>Phone<input type="tel"></label>
-        <label>Company name<input type="text"></label>
-        <button type="button">Submit</button>
-      </form>
+<form action="https://formspree.io/f/xdarogey" method="POST">
+
+  <label>
+    Name
+    <input type="text" name="name" required>
+  </label>
+
+  <label>
+    Company
+    <input type="text" name="company">
+  </label>
+
+  <label>
+    Email
+    <input type="email" name="email" required>
+  </label>
+
+  <label>
+    Phone
+    <input type="tel" name="phone">
+  </label>
+
+  <label>
+    Inquiry
+    <textarea name="message" rows="5" required></textarea>
+  </label>
+
+  <input
+    type="hidden"
+    name="_subject"
+    value="Brush Up Technology Website Inquiry"
+  >
+
+  <button type="submit">Submit</button>
+
+</form>
     </section>
   </main>
 
