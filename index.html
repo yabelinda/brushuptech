@@ -177,5 +177,20 @@
     <p>E-mail: JustinChao@Brushuptech.com<br>Tel: +886-3-324-7068</p>
     <address>桃園市蘆竹區內溪路60之7號<br>No. 60-7, Neixi Rd., Luzhu Dist., Taoyuan City 338012, Taiwan</address>
   </footer>
+  <script>
+  const animatedElements = document.querySelectorAll('.fade-up, .fade-left, .fade-right');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  animatedElements.forEach(el => observer.observe(el));
+</script>
 </body>
 </html>
