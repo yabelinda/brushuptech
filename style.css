@@ -264,7 +264,9 @@ a{color:inherit;text-decoration:none}
   padding:13px 18px;
 }
 
-.application{padding-top:90px}
+.application{
+  padding:60px 20px 80px;
+}
 .application-grid{
   width:min(860px,100%);
   margin:0 auto;
