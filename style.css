@@ -286,7 +286,7 @@ a{color:inherit;text-decoration:none}
 .service-band{
   width:min(1060px,calc(100% - 40px));
   margin:0 auto 110px;
-  background:linear-gradient(90deg,#009fe3 0 72%,#dff5ff 72%);
+  background:linear-gradient(90deg,#009fe3 0 72%);
   padding:64px 74px 74px;
   position:relative;
 }
